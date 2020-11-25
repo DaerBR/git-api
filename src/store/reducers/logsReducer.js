@@ -1,4 +1,4 @@
-import { LOG_ACTION } from '../actions/types';
+import { LOG_ACTION, CLEAR_LOGS } from '../actions/types';
 
 export const logsReducer =  (state = [], action) => {
     switch (action.type) {
@@ -10,6 +10,12 @@ export const logsReducer =  (state = [], action) => {
                     action.payload
                 ]
             }
+        case CLEAR_LOGS: {
+            return {
+                ...state,
+                logs: []
+            }
+        }
         default:
             return state;
     }

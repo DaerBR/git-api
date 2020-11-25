@@ -33,9 +33,9 @@ const TabsMenu = (props) => {
     const handleTabChange = (event, newValue) => {
         setActiveTab(newValue);
     };
-    if (!props.auth.isLoggedIn) {
-        return <Redirect to='/login' />;
-    }
+    // if (!props.auth.isLoggedIn) {
+    //     return <Redirect to='/login' />;
+    // }
 
     return (
         <div className={classes.root}>
@@ -44,7 +44,7 @@ const TabsMenu = (props) => {
                     <Tab label="Profile" {...a11yProps(0)} />
                     <Tab label="Repos" {...a11yProps(1)} />
                     <Tab label="Activity Log" {...a11yProps(2)} />
-                    <Tab label="Index" {...a11yProps(3)} />
+                    <Tab label="Settings" {...a11yProps(3)} />
                 </Tabs>
             </AppBar>
             <TabPanel value={activeTab} index={0}>

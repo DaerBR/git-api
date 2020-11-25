@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, Component } from 'react';
+import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import GitHubLogin from 'react-github-login';
 import { exchangeCodeForToken } from "../../store/actions";
@@ -18,11 +18,12 @@ class Login extends Component {
         }
         return (
             <div>
-                Click here to login via github
+                To use this API you must login via GitHub. Click here to proceed.
                 <GitHubLogin clientId={this.props.auth.clientID}
                              onSuccess={this.successHandler}
                              onFailure={this.errorHandler}
                              redirectUri=""
+                             buttonText="Login now"
                 />
             </div>
         )
