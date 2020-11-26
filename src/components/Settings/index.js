@@ -1,9 +1,14 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { logout, clearLogs } from "../../store/actions";
-import history from "../../history";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { logout, clearLogs, logAction } from '../../store/actions';
+import history from '../../history';
+import './style.css';
 
 class Settings extends Component {
+    componentDidMount() {
+        this.props.logAction('Switched to Settings');
+    }
+
     state = { message: ''}
     handleClearLogs = () => {
         this.props.clearLogs();
@@ -12,15 +17,18 @@ class Settings extends Component {
     handleLogout = () => {
         // Current version Git API does not allow to revoke oAuth token, so it will be just state auth status change
         this.props.logout();
+        this.props.logAction('Logout');
         history.push('/login');
     }
     render() {
         return (
             <div className="tab-panel-wrapper settings-wrapper">
                 <h2>API Settings</h2>
-                <button onClick={this.handleClearLogs}>Clear API logs</button>
-                <button onClick={this.handleLogout}>Logout from API</button>
-                <div className="system-message">{this.state.message}</div>
+                <div className="buttons-wrapper">
+                    <button onClick={this.handleClearLogs}>Clear API logs</button>
+                    <button onClick={this.handleLogout}>Logout from API</button>
+                    <div className="system-message">{this.state.message}</div>
+                </div>
             </div>
         );
 
@@ -30,4 +38,4 @@ class Settings extends Component {
 const mapStateToProps = (state) => {
     return { auth: state.auth, logs: state.logs };
 }
-export default connect(mapStateToProps, {logout,clearLogs})(Settings);
+export default connect(mapStateToProps, {logout, clearLogs, logAction})(Settings);

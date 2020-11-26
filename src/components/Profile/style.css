@@ -1,0 +1,20 @@
+.profile-wrapper {
+
+}
+.profile-content {
+    display: flex;
+}
+.avatar-wrapper img {
+    max-width: 200px;
+}
+.profile-info {
+    margin-left: 40px;
+}
+.profile-item {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.profile-item-name {
+    font-weight: bold;
+    margin-right: 10px;
+}

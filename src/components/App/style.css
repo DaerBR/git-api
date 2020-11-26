@@ -1,4 +1,36 @@
-body {
+body,
+a {
   margin: 0;
   padding: 0;
+  font-family: Helvetica;
+  font-size: 14px;
+  color: #4b5358;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:visited {
+  color: #4b5358;
+}
+button {
+  border: 1px solid #91929d;
+  background: #fff;
+  color: #4b5358;
+  outline: none;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 6px 15px;
+}
+button:hover {
+  background: #4b5358;
+  color: #fff;
+}
+h2, h2 a {
+  font-size: 24px;
+}
+.tabs-content-wrapper {
+  display: flex;
 }

@@ -1,0 +1,38 @@
+.repos-list {
+
+}
+.repo-item {
+    padding-bottom: 9px;
+    border-bottom: 1px solid;
+    margin-bottom: 20px;
+}
+.repo-name {
+    margin-bottom: 10px;
+}
+.repo-name a {
+    font-size: 18px;
+    font-weight: bold;
+}
+.repo-stat-line {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.short-item {
+    display: inline-flex;
+}
+.repo-stat-name {
+    font-weight: bold;
+    margin-right: 8px;
+}
+.branches-list .repo-stat-name {
+    margin-bottom: 5px;
+}
+.branch-item {
+    margin-bottom: 5px;
+}
+.is-default {
+    font-size: 10px;
+    margin-left: 10px;
+    color: green;
+}

@@ -1,0 +1,16 @@
+.login-block-wrapper {
+padding: 40px;
+}
+.login-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1 1 100%;
+}
+.login-block button {
+
+}
+.login-text {
+    margin-bottom: 40px;
+}

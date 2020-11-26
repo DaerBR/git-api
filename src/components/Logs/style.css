@@ -1,0 +1,15 @@
+.actions-list {
+    padding-left: 15px;
+}
+.action-item {
+    margin-bottom: 8px;
+}
+.action-type {
+    font-size:16px;
+}
+.action-time {
+    font-style: italic;
+}
+.divider {
+    padding: 0 5px;
+}

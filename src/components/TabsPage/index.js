@@ -33,9 +33,10 @@ const TabsMenu = (props) => {
     const handleTabChange = (event, newValue) => {
         setActiveTab(newValue);
     };
-    // if (!props.auth.isLoggedIn) {
-    //     return <Redirect to='/login' />;
-    // }
+
+    if (!props.auth.isLoggedIn) {
+        return <Redirect to='/login' />;
+    }
 
     return (
         <div className={classes.root}>
@@ -47,23 +48,25 @@ const TabsMenu = (props) => {
                     <Tab label="Settings" {...a11yProps(3)} />
                 </Tabs>
             </AppBar>
-            <TabPanel value={activeTab} index={0}>
-                <Profile />
-            </TabPanel>
-            <TabPanel value={activeTab} index={1}>
-                <Repos />
-            </TabPanel>
-            <TabPanel value={activeTab} index={2}>
-                <Logs />
-            </TabPanel>
-            <TabPanel value={activeTab} index={3}>
-                <Settings />
-            </TabPanel>
+            <div className="tabs-content-wrapper">
+                <TabPanel value={activeTab} index={0}>
+                    <Profile />
+                </TabPanel>
+                <TabPanel value={activeTab} index={1}>
+                    <Repos />
+                </TabPanel>
+                <TabPanel value={activeTab} index={2}>
+                    <Logs />
+                </TabPanel>
+                <TabPanel value={activeTab} index={3}>
+                    <Settings />
+                </TabPanel>
+            </div>
         </div>
     );
 }
 
 const mapStateToProps = (state) => {
-    return { auth: state.auth }
+    return { auth: state.auth, logs: state.logs }
 }
 export default connect(mapStateToProps)(TabsMenu);

@@ -3,18 +3,12 @@ import { LOG_ACTION, CLEAR_LOGS } from '../actions/types';
 export const logsReducer =  (state = [], action) => {
     switch (action.type) {
         case LOG_ACTION:
-            return {
+            return [
                 ...state,
-                logs: [
-                    ...state.logs,
-                    action.payload
-                ]
-            }
+                action.payload
+            ]
         case CLEAR_LOGS: {
-            return {
-                ...state,
-                logs: []
-            }
+            return []
         }
         default:
             return state;
