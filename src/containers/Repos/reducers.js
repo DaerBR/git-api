@@ -1,4 +1,4 @@
-import { FETCH_REPOS, FETCH_REPO_DETAILS } from '../actions/types';
+import { FETCH_REPOS, FETCH_REPO_DETAILS } from '../../store/actions/types';
 
 export const reposReducer = (state = [], action) => {
     switch (action.type) {

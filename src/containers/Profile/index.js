@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './style.css';
-import { fetchUserData, logAction } from '../../store/actions';
+import { fetchUserData } from './actions';
+import { logAction } from "../Logs/actions";
 
 class Profile extends Component {
 

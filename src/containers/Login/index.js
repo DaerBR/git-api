@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import GitHubLogin from 'react-github-login';
-import { exchangeCodeForToken, logAction } from '../../store/actions';
+import { exchangeCodeForToken } from './actions';
+import { logAction } from "../Logs/actions";
 import { connect } from 'react-redux';
 import './style.css';
 

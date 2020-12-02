@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { logAction } from '../../store/actions';
+import { logAction } from "./actions";
 import './style.css';
 
 class Logs extends Component {

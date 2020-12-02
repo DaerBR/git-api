@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchReposData, fetchRepoDetails, logAction } from '../../store/actions';
+import { fetchReposData, fetchRepoDetails } from './actions';
+import { logAction } from "../Logs/actions";
 import './styles.css';
 
 class Repos extends Component {

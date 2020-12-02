@@ -1,4 +1,4 @@
-import { LOG_ACTION, CLEAR_LOGS } from '../actions/types';
+import { LOG_ACTION, CLEAR_LOGS } from '../../store/actions/types';
 
 export const logsReducer =  (state = [], action) => {
     switch (action.type) {

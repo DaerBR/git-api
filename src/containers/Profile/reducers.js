@@ -1,4 +1,4 @@
-import { FETCH_USERDATA } from '../actions/types';
+import { FETCH_USERDATA } from '../../store/actions/types';
 
 export const userReducer = (state = [], action) => {
     switch (action.type) {

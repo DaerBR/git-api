@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { logout, clearLogs, logAction } from '../../store/actions';
+import { clearLogs } from './actions';
+import { logAction } from "../Logs/actions";
+import { logout } from "../Login/actions";
+
 import history from '../../history';
 import './style.css';
 

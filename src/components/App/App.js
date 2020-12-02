@@ -1,9 +1,9 @@
 import React from 'react';
 import './style.css';
 import { Router, Route, Switch } from 'react-router-dom';
-import TabsPage from '../TabsPage';
+import TabsPage from '../../containers/TabsPage';
 
-import Login from '../Login';
+import Login from '../../containers/Login';
 import Page404 from '../Page404';
 import history from "../../history";
 
